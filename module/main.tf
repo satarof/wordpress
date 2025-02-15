@@ -16,12 +16,3 @@ terraform {
     region = "us-east-1"
   }
 }
-
-
-# output pubsub2 {
-#     value = module.public_subnet_cidrs.id
-# }
-
-# output pubsub3 {
-#     value = module.public_subnet_cidrs.id
-# }

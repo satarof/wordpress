@@ -1,4 +1,3 @@
-### all the has been written with snakecase
 ### vpc
 resource "aws_vpc" "wordpress_vpc" {
   cidr_block = var.vpc_cidr
@@ -128,7 +127,7 @@ resource "aws_instance" "wordpress-ec2" {
   instance_type   = var.instance_type
   ami             = var.ami
   vpc_security_group_ids = [aws_security_group.wordpress-sg.id]
-  ###modify somelines here
+  ###modify somelines here, the code creates 3 instances
   for_each      = aws_subnet.public_subnet
   subnet_id       = each.value.id
   key_name        = aws_key_pair.wordpress-sshkey.key_name
